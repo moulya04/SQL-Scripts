@@ -1,6 +1,6 @@
-/* ALL ABOUT SQL WITH QUERIES
+                                                         ALL ABOUT SQL WITH QUERIES
 
-1.DATABASE is a system that allows users to store and organise data.
+/* 1.DATABASE is a system that allows users to store and organise data.
 2.SQL(Structured Query Language) is a programming language used to interact with database.
 3.SQL STRUCTURE: Database> Tables> Data(Rows & Columns) 
 4.CRUD is an acronym that stands for: Create (INSERT), Read (SELECT), Update (UPDATE), Delete (DELETE)

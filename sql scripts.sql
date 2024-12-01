@@ -1,5 +1,5 @@
 create database music_store; -- to create a new database
-use music_store; -- to use the database
+use music_store; -- to use the current database
 
 -- Question set 1 - Easy
 -- Q1. Who is the senior most employee based on job title ?

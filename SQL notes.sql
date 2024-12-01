@@ -49,7 +49,7 @@ SET name = 'Xam', age = 32
 WHERE id = 4;
 
 DELETE FROM customer
-WHERE id = 3;-- Delete statement is used to delete existing records in a table 
+WHERE id = 3; -- Delete statement is used to delete existing records in a table 
 
 ALTER TABLE customer -- ALTER TABLE statement is used to add, delete and modify columns in existing table
 ADD COLUMN PET CHAR(10) NULL; -- to add new column in exisiting table
@@ -65,7 +65,7 @@ MODIFY Name CHAR(10) NOT NULL; -- to change the datatype/ constraint
 ALTER TABLE customer
 CHANGE Name CustName CHAR(10) NOT NULL; -- to change the name of column
 
-TRUNCATE TABLE customer;-- TRUNCATE TABLE command deletes the data inside a table, but not the table itself
+TRUNCATE TABLE customer; -- TRUNCATE TABLE command deletes the data inside a table, but not the table itself
 
 DROP TABLE customer; -- DROP TABLE command deletes a table in the database
 
@@ -73,7 +73,7 @@ SELECT * FROM customer -- SELECT statement is used to select data from a databas
 SELECT DISTINCT CustName from customer -- to select distinct/unique fields available in the table
 
 /* WHERE clause is used to filter records
-	It is used to extract only those records that fulfill a specified condition */
+   It is used to extract only those records that fulfill a specified condition */
 SELECT name FROM classroom
 WHERE grade = 'A' 
 

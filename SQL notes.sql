@@ -1,6 +1,6 @@
-                                                         ALL ABOUT SQL WITH QUERIES
+/* ALL ABOUT SQL WITH QUERIES
 
-/* 1.DATABASE is a system that allows users to store and organise data.
+1.DATABASE is a system that allows users to store and organise data.
 2.SQL(Structured Query Language) is a programming language used to interact with database.
 3.SQL STRUCTURE: Database> Tables> Data(Rows & Columns) 
 4.CRUD is an acronym that stands for: Create (INSERT), Read (SELECT), Update (UPDATE), Delete (DELETE)
@@ -49,7 +49,7 @@ SET name = 'Xam', age = 32
 WHERE id = 4;
 
 DELETE FROM customer
-WHERE id = 3; -- Delete statement is used to delete existing records in a table 
+WHERE id = 3;-- Delete statement is used to delete existing records in a table 
 
 ALTER TABLE customer -- ALTER TABLE statement is used to add, delete and modify columns in existing table
 ADD COLUMN PET CHAR(10) NULL; -- to add new column in exisiting table
@@ -65,7 +65,7 @@ MODIFY Name CHAR(10) NOT NULL; -- to change the datatype/ constraint
 ALTER TABLE customer
 CHANGE Name CustName CHAR(10) NOT NULL; -- to change the name of column
 
-TRUNCATE TABLE customer; -- TRUNCATE TABLE command deletes the data inside a table, but not the table itself
+TRUNCATE TABLE customer;-- TRUNCATE TABLE command deletes the data inside a table, but not the table itself
 
 DROP TABLE customer; -- DROP TABLE command deletes a table in the database
 
@@ -73,7 +73,7 @@ SELECT * FROM customer -- SELECT statement is used to select data from a databas
 SELECT DISTINCT CustName from customer -- to select distinct/unique fields available in the table
 
 /* WHERE clause is used to filter records
-   It is used to extract only those records that fulfill a specified condition */
+	It is used to extract only those records that fulfill a specified condition */
 SELECT name FROM classroom
 WHERE grade = 'A' 
 
@@ -93,3 +93,22 @@ WHERE grade = 'A' AND rollno > 3 -- WHERE clause with OPERATORS
 ORDER BY grade -- ORDER BY is used to sort the result-set in ascending(ASC) or descending order(DESC)
 LIMIT 5 -- will return only the Top by 5 rows from the table 
 
+STRING FUNCTIONS are used to perform an operation on input string and return an output string
+SELECT UPPER(CustName) FROM customer -- converts value to uppercase
+SELECT LOWER(City) FROM customer -- converts value to lowercase
+SELECT LENGTH(CustName) -- returns length of value in a text field
+SELECT SUBSTRING(CustName, 1, 3), CustName FROM customer-- extracts a substring from a string
+SELECT CONCAT(CustName, City), CustName, City FROM Customer -- adds two or more strings together
+SELECT REPLACE(CustName, 'Sam', 'Rom'), CustName FROM customer -- replaces all occurrences of a substring within a string, with a new substring
+-
+-- AGGREGATE FUNCTION perform a calculation on multiple values and returns a single value
+SELECT COUNT(amount) FROM payment -- returns number of values
+SELECT SUM(amount) FROM payment -- returns sum of all values
+SELECT MAX(amount) FROM payment -- returns maximum value
+SELECT MIN(amount) FROM payment -- returns minimum value
+SELECT AVG(amount) FROM payment -- returns average value
+SELECT ROUND(AVG(amount), 2) FROM payment -- rounds a number to a specified number of decimal places
+
+-- GROUP BY 
+-- HAVING 
+-- TO BE CONTINUED 

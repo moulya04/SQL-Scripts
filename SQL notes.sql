@@ -109,6 +109,36 @@ SELECT MIN(amount) FROM payment -- returns minimum value
 SELECT AVG(amount) FROM payment -- returns average value
 SELECT ROUND(AVG(amount), 2) FROM payment -- rounds a number to a specified number of decimal places
 
--- GROUP BY 
--- HAVING 
+SELECT mode
+
+/* GROUP BY statement group rows that have the same values into summary rows. 
+It is often used with aggregate functions, to group the result-set by one or more columns.
+HAVING clause is used to apply a filter on the result of GROUP BY based on the specified condition. */
+
+SELECT mode, SUM(amount) AS total FROM payment
+GROUP BY mode
+HAVING COUNT(amount) >= 3 AND COUNT(amount) < 4
+ORDER BY total ASC
+
+-- Order of execution in SQL: FROM --> JOINS --> WHERE --> GROUP BY --> HAVING --> SELECT --> ORDER BY --> LIMIT
+
+TIMESTAMP -- data type is used fpr va;ues that contain both date and time parts.
+SELECT NOW() -- displays the current time and date
+SELECT CURRENT_TIME -- displays the current time
+SELECT CURRENT_DATE -- displays the current date
+SELECT CURTIME() AS CurrentTime, DAYNAME(CURDATE()) AS Weekday; -- displays the time and day
+SELECT DAYNAME(CURDATE()) AS Weekday; -- displays the day
+
+-- EXTRACT() extracts  a part from a given date value.
+SELECT EXTRACT(MONTH FROM payment_date) AS payment_month, payment_date FROM payment -- extracts month from mentioned column
+SELECT EXTRACT(YEAR FROM payment_date) AS payment_year, payment_date FROM payment -- extracts year from mentioned date column
+SELECT EXTRACT(HOUR FROM payment_date) AS payment_hour, payment_date FROM payment -- extracts hour from mentioned date column
+SELECT EXTRACT(DAY FROM payment_date) AS payment_day, payment_date FROM payment -- extracts day(date) from mnetioned date column
+SELECT EXTRACT(MINUTE FROM payment_date) AS payment_minute, payment_date FROM payment -- extracts minute from mnetioned date column
+SELECT EXTRACT(QUARTER FROM payment_date) AS payment_quarter, payment_date FROM payment -- extracts quarter from mnetioned date column
+
+SELECT DAYOFWEEK(payment_date) AS payment_day, payment_date FROM payment; -- it gives the corresponding weekday index
+SELECT DAYNAME(payment_date) AS payment_day, payment_date FROM payment; -- it displays the weekday name
+
+JOINS 
 -- TO BE CONTINUED 

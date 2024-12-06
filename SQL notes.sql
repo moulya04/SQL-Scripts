@@ -109,8 +109,6 @@ SELECT MIN(amount) FROM payment -- returns minimum value
 SELECT AVG(amount) FROM payment -- returns average value
 SELECT ROUND(AVG(amount), 2) FROM payment -- rounds a number to a specified number of decimal places
 
-SELECT mode
-
 /* GROUP BY statement group rows that have the same values into summary rows. 
 It is often used with aggregate functions, to group the result-set by one or more columns.
 HAVING clause is used to apply a filter on the result of GROUP BY based on the specified condition. */
